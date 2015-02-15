@@ -5,7 +5,7 @@ from django.db import models
 class clubs(models.Model):
 	name = models.CharField(max_length=64)
 	nickname = models.CharField(max_length=64)
-	logo = models.ImageField()
+	logo = models.ImageField(blank=True)
 	manager = models.CharField(max_length=128)
 	established = models.IntegerField()
 	stadium = models.CharField(max_length=64)
@@ -33,7 +33,7 @@ class players(models.Model):
 	club = models.OneToOneField('clubs', related_name= "team")
 	position = models.CharField(max_length=64, choices=POSITION_CHOICES, default=GOALKEEPER) # GK, Defender, Midfielder, Attacker -  Field for this? 
 	born = models.DateField()
-	height = models.DecimalField(max_digits=2, decimal_places=2)
+	height = models.DecimalField(max_digits=3, decimal_places=2)
 	weight = models.IntegerField() # Field for this?
 	nationality = models.CharField(max_length=64) # Choices
 	# these should all link from the matches class:
@@ -43,6 +43,7 @@ class players(models.Model):
 	yellows = models.IntegerField()
 	reds = models.IntegerField()
 	active = models.BooleanField(default=True)
+	slug = models.SlugField()
 
 	def __unicode__(self):
 		return self.name
@@ -55,12 +56,12 @@ class players(models.Model):
 # 	gameweek = models.IntegerField() # max 38
 # 	date = models.DateField() #saturday/sunday/monday - possible to do choices?
 # 	kickoff = models.TimeField() #choices
-# 	home = models.ManyToManyField('name.clubs', related_name="home_team")
-# 	away = models.ManyToManyField('name.clubs', related_name="away_team")
-# 	stadium = models.ManyToManyField('stadium.clubs', related_name="stadium") 
+# 	home = models.ManyToManyField('clubs', related_name="home_team")
+# 	away = models.ManyToManyField('clubs', related_name="away_team")
+# 	stadium = models.ManyToManyField('clubs', related_name="stadium") 
 # 	home_goals = models.IntegerField()
 # 	away_goals = models.IntegerField()
-# 	#goal_scorers = models.ForeignKey(players) #Would make it a foreignkey on players, but charfield multiple choices?
+# 	#goal_scorers = models.ForeignKey(players) #Would make it a foreignkey on players, but multiple choices with the same attribute selected more than once?
 
 # 	def __unicode__(self):
 # 		return str(self.gameweek)
