@@ -36,21 +36,30 @@ class players(models.Model):
 	height = models.DecimalField(max_digits=3, decimal_places=2)
 	weight = models.IntegerField() # Field for this?
 	nationality = models.CharField(max_length=64) # Choices
-	# these should all link from the matches class:
-	played = models.IntegerField()
-	clean_sheets = models.IntegerField() 
-	scored = models.IntegerField()
-	yellows = models.IntegerField()
-	reds = models.IntegerField()
-	active = models.BooleanField(default=True)
+	active = models.BooleanField(default=True) # active = current epl player
 	slug = models.SlugField()
 
 	def __unicode__(self):
-		return self.name
+		return self.name 
 
-	def goals_scored(self):
-		print name + "has scored this many: "
-		return self.scored
+
+	
+# class playerStats(models.Model):
+# 	name = models.ManyToManyField('players')
+# 	played = models.IntegerField()
+# 	clean_sheets = models.IntegerField() 
+# 	scored = models.IntegerField()
+# 	yellows = models.IntegerField()
+# 	reds = models.IntegerField()
+# 	active = models.BooleanField(default=True)
+# 	
+
+# 	def __unicode__(self):
+# 		return self.name
+
+# 	def goals_scored(self):
+# 		print name + "has scored this many: "
+# 		return self.scored
 
 # class matches(models.Model):
 # 	gameweek = models.IntegerField() # max 38

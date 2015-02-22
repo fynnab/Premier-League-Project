@@ -1,0 +1,340 @@
+
+
+ARSENAL
+
+
+
+Nickname:
+The Gunners
+
+
+Stadium:
+Emirates Stadium
+
+
+Date Established:
+1886
+
+
+
+ASTON VILLA
+
+
+
+Nickname:
+The Villans
+
+
+Stadium:
+Villa Park
+
+
+Date Established:
+1874
+
+
+
+BURNLEY
+
+
+
+Nickname:
+The Clarets
+
+
+Stadium:
+Turf Moor
+
+
+Date Established:
+1882
+
+
+
+CHELSEA
+
+
+
+Nickname:
+The Blues
+
+
+Stadium:
+Stamford Bridge
+
+
+Date Established:
+1905
+
+
+
+CRYSTAL PALACE
+
+
+
+Nickname:
+The Eagles
+
+
+Stadium:
+Selhurst Park
+
+
+Date Established:
+1905
+
+
+
+EVERTON
+
+
+
+Nickname:
+The Toffees
+
+
+Stadium:
+Goodison Park
+
+
+Date Established:
+1878
+
+
+
+HULL
+
+
+
+Nickname:
+The Tigers
+
+
+Stadium:
+The KC Stadium
+
+
+Date Established:
+1904
+
+
+
+LEICESTER
+
+
+
+Nickname:
+The Foxes
+
+
+Stadium:
+King Power Stadium
+
+
+Date Established:
+1884
+
+
+
+LIVERPOOL
+
+
+
+Nickname:
+The Reds
+
+
+Stadium:
+Anfield
+
+
+Date Established:
+1892
+
+
+
+MAN CITY
+
+
+
+Nickname:
+The Citizens
+
+
+Stadium:
+Etihad Stadium
+
+
+Date Established:
+1880
+
+
+
+MAN UTD
+
+
+
+Nickname:
+The Red Devils
+
+
+Stadium:
+Old Trafford
+
+
+Date Established:
+1878
+
+
+
+NEWCASTLE
+
+
+
+Nickname:
+The Magpies
+
+
+Stadium:
+St James' Park
+
+
+Date Established:
+1892
+
+
+
+QPR
+
+
+
+Nickname:
+The Hoops
+
+
+Stadium:
+Loftus Road Stadium
+
+
+Date Established:
+1882
+
+
+
+SOUTHAMPTON
+
+
+
+Nickname:
+The Saints
+
+
+Stadium:
+St. Mary's Stadium
+
+
+Date Established:
+1885
+
+
+
+STOKE
+
+
+
+Nickname:
+The Potters
+
+
+Stadium:
+Britannia Stadium
+
+
+Date Established:
+1863
+
+
+
+SUNDERLAND
+
+
+
+Nickname:
+The Black Cats
+
+
+Stadium:
+Stadium of Light
+
+
+Date Established:
+1879
+
+
+
+SWANSEA
+
+
+
+Nickname:
+The Swans
+
+
+Stadium:
+Liberty Stadium
+
+
+Date Established:
+1912
+
+
+
+SPURS
+
+
+
+Nickname:
+Spurs / Lilywhites
+
+
+Stadium:
+White Hart Lane
+
+
+Date Established:
+1882
+
+
+
+WEST BROM
+
+
+
+Nickname:
+The Baggies
+
+
+Stadium:
+The Hawthorns
+
+
+Date Established:
+1878
+
+
+
+WEST HAM
+
+
+
+Nickname:
+The Hammers
+
+
+Stadium:
+Boleyn Ground
+
+
+Date Established:
+1895
+

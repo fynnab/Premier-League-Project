@@ -2,6 +2,13 @@ import os
 import sys
 import django
 
+# note - probably a more efficient way to do this here: https://docs.djangoproject.com/en/1.7/howto/custom-management-commands/
+
+# for loop to take data from file and put into add_club function
+f = open("new.txt", "r")
+
+
+f.close()
 
 
 def add_club(name, nickname, manager, established, stadium, active=True):

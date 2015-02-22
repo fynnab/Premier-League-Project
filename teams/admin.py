@@ -12,8 +12,8 @@ class clubsAdmin(admin.ModelAdmin):
 	#prepopulated_fields
 
 class playersAdmin(admin.ModelAdmin):
-	list_display = ['name', 'club', 'nationality', 'position', 'played', 'scored', 'active']
-	list_filter = ['name', 'club', 'nationality', 'position', 'played', 'scored', 'active']
+	list_display = ['name', 'club', 'nationality', 'position','active']
+	list_filter = ['name', 'club', 'nationality', 'position', 'active']
 	prepopulated_fields = {"slug": ("name",)}
 
 admin.site.register(clubs, clubsAdmin)
