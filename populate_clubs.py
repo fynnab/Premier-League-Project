@@ -1,31 +1,26 @@
 import os
 import sys
 import django
+import json
+import urllib2
+from urllib import urlopen
 
-# note - probably a more efficient way to do this here: https://docs.djangoproject.com/en/1.7/howto/custom-management-commands/
-
-# for loop to take data from file and put into add_club function
-f = open("new.txt", "r")
-
-
-f.close()
-
-
-def add_club(name, nickname, manager, established, stadium, active=True):
-	c = clubs.objects.get_or_create(name=name, nickname=nickname, manager=manager, established=established, stadium=stadium, active=active)
+def add_club(name, active=True):
+	c = clubs.objects.get_or_create(name=name, active=active)
 	return c
 
-def populate():
-	add_club(name = "Aston Villa",
-		nickname = "Villans",
-		manager = "Tim Sherwood",
-		established = "1897",
-		stadium = "Villa Park"
-		)
+club_object = json.load(urllib2.urlopen("http://api.football-data.org/alpha/soccerseasons/354/teams"))
 
-	# Print out what was added
-	for c in clubs.objects.all():
-		print c
+def populate():
+	for club_name in club_object['teams']:
+		name1 = club_name['name']
+
+		add_club(name = name1
+			)
+
+		# Print out what was added
+		print clubs.objects.all()
+		
 
 
 

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Test </h1>
+	{% for clubs1 in clubs.objects.all %}
+	<ul>
+		<li> {{clubs1.name}} </li>
+		<li> {{clubs1.nickname}} </li> 
+		<li> {{clubs1.manager}} </li>
+		<li> {{clubs1.stadium}} </li>
+	</ul>
+
+	<!-- List of current squad on clubs page !-->
+
+	{% endfor %}
+{% endblock %}

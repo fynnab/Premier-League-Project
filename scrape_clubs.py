@@ -1,21 +1,21 @@
-from bs4 import BeautifulSoup
+import json
 import urllib2
 from urllib import urlopen
+import mechanize 
+
+br = mechanize.Browser()
+br.open("http://api.football-data.org")
+request = br.request
+print request.header_items()
 
 
-url = 'http://www.premierleague.com/en-gb/kids/clubs.html'
-page = urllib2.urlopen(url)
-print page 
-soup = BeautifulSoup(page)
+# test = json.load(urllib2.urlopen("http://api.football-data.org/alpha/soccerseasons/354/teams"))
 
-f = open("new.txt", "w")
-for match in soup.select(".clublist .clubs-module"):
-    match1 = match.get_text()
-    f.write(match1)
-    words = match1.split()
-    list1 = [word for word in words if 'nickname' in word]
-    print list1 
+# Dict = {}
+# for team in test['teams']:
+# 	# print team['_links']['players']['href'], team['name']
 
+# 	Dict['url'] = team['_links']['players']['href']
+# 	Dict['name'] = team['name']
 
-f.close()
-
+# print Dict

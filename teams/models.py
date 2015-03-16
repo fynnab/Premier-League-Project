@@ -7,7 +7,7 @@ class clubs(models.Model):
 	nickname = models.CharField(max_length=64)
 	logo = models.ImageField(blank=True)
 	manager = models.CharField(max_length=128)
-	established = models.IntegerField()
+	# established = models.IntegerField(blank=True)
 	stadium = models.CharField(max_length=64)
 	active = models.BooleanField(default=True)
 
@@ -18,23 +18,10 @@ class clubs(models.Model):
 
 
 class players(models.Model):
-	GOALKEEPER = 'GK'
-	DEFENDER = 'DEF'
-	MIDFIELDER = 'MID'
-	FORWARD = 'FWD'
-	POSITION_CHOICES = (
-		(GOALKEEPER, 'Goalkeeper'),
-		(DEFENDER, 'Defender'),
-		(MIDFIELDER, 'Midfielder'),
-		(FORWARD, 'Forward'),
-		)
-
 	name = models.CharField(max_length=64)
-	club = models.OneToOneField('clubs', related_name= "team")
-	position = models.CharField(max_length=64, choices=POSITION_CHOICES, default=GOALKEEPER) # GK, Defender, Midfielder, Attacker -  Field for this? 
+	club = models.ForeignKey(clubs)
+	position = models.CharField(max_length=64) 
 	born = models.DateField()
-	height = models.DecimalField(max_digits=3, decimal_places=2)
-	weight = models.IntegerField() # Field for this?
 	nationality = models.CharField(max_length=64) # Choices
 	active = models.BooleanField(default=True) # active = current epl player
 	slug = models.SlugField()
